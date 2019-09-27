@@ -1,5 +1,10 @@
 /.vscode/ipch/
-/build/
+/build/CMakeFiles/
+/build/test/
+/build/CMakeCache.txt
+/build/cmake_install.cmake
+/build/Makefile
+/build/Playground
 
 
 # Prerequisites
