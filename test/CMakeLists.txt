@@ -18,13 +18,17 @@ set (SOURCES
     ../src/Library/Book/Book.cpp
     Library/BookshelfTest/BookshelfTest.cpp
     Library/DummyTest.cpp
+    ../src/Persons/AbstractPerson.hpp
+    Persons/MockedPerson.hpp
+    Persons/PersonTesting.cpp
 )
 
 set(HEADERS
     stdafx_test.h
+    Persons/MockedPerson.hpp
 )
 
 add_executable( runUnitTests ${HEADERS} ${SOURCES})
 # Link test executable against gtest & gtest_main
-target_link_libraries(runUnitTests gtest pthread gtest_main)
+target_link_libraries(runUnitTests gtest gmock pthread gtest_main)
 add_test( runUnitTests runUnitTests )

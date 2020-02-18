@@ -6,6 +6,15 @@
     ],
     "tasks": [
         {
+            "label": "reset",
+            "type": "shell",
+            "command": "reset",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            }
+        },
+        {
             "label": "cmake",
             "type": "shell",
             "options": {
@@ -17,6 +26,9 @@
                 "\"Unix Makefiles\"",
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "${workspaceRoot}"
+            ],
+            "dependsOn": [
+                "reset"
             ]
         },
         {
